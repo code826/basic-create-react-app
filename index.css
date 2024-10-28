@@ -1,0 +1,17 @@
+.movie-card{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 200px;
+    border: 2px solid black;
+    justify-content: space-around;
+
+}
+.movie-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 600px;
+    justify-content: space-around;
+
+}

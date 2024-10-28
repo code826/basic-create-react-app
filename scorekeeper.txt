@@ -1,0 +1,47 @@
+showing react extension
+difference of && and or operator
+about score keeper project 
+how to handle events in react
+onClick = {function Reference}
+how to render again
+how to handle UI update showing the power of react
+passign argument to function
+
+
+React.createRef() is a function in React used to create a reference (ref) to a DOM element or a component instance, which allows you to directly access or manipulate it. This is helpful when you need to interact with DOM elements in a more controlled way, such as focusing an input field, managing animations, or integrating third-party libraries that need direct access to a DOM node.
+
+Why We Use React.createRef()
+In most cases, React’s state and props should handle updates, but refs come in handy when:
+
+You need to access a DOM element directly (e.g., focusing an input on mount).
+Avoiding re-rendering when you need to retrieve the latest value or property of a component or element.
+Integrating with non-React libraries that require DOM manipulation.
+How It Works
+Read-only Access: Yes, the ref itself is read-only, meaning the reference created by React.createRef() cannot be reassigned to a new element after creation. However, you can still access and manipulate the properties of the referenced DOM node or component through ref.current.
+Example
+Here’s a simple example of focusing an input on button click:
+
+javascript
+Copy code
+import React, { createRef } from 'react';
+
+function FocusInput() {
+  const inputRef = createRef();
+
+  const handleClick = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    <div>
+      <input ref={inputRef} type="text" />
+      <button onClick={handleClick}>Focus the input</button>
+    </div>
+  );
+}
+In this example, inputRef.current.focus() gives direct access to the input DOM node without triggering a re-render.
+
+function call(val){
+
+}
+{function}

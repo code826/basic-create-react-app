@@ -1,0 +1,160 @@
+1.what is react ?
+2.history of react ?
+3. Why React ?
+    React is composable . reusability
+    Faster performance . (virtual DOM)
+    React is declarative
+3.SPA v/s MPA 
+4.React is declarative (example html)
+ it means you just need to tell what you want not like how you want so 
+  example 
+    const button = document.createElement('button');
+    button.textContent = 'Click me';
+    button.addEventListener('click', function() {
+    document.body.style.backgroundColor = 'blue';
+    });
+    document.body.appendChild(button);
+
+    function App() {
+    const [color, setColor] = React.useState('white');
+
+    return (
+    <div style={{ backgroundColor: color }}>
+        <button onClick={() => setColor('blue')}>Click me</button>
+    </div>
+    );
+    } 
+
+ 5. Virtual DOM : copy of real dom in memory react first check the diff then make changes in batc in efficient way   
+6.
+
+Memory updated
+ReactDOM.createRoot() is a method that creates a root container for your React app and manages how the app renders within that container. It doesn’t directly create a virtual DOM but sets up the environment in which React’s virtual DOM will be used to update the actual DOM.
+
+What Does createRoot() Do?
+Creates a Root for Rendering:
+
+createRoot() creates a "root container" in the real DOM. This root container is where React will render its components, manage their lifecycle, and handle updates.
+Initializes the Rendering Process:
+
+Once the root is created, you can call the .render() method to start the rendering process. The component tree you pass to .render() will be converted into a virtual DOM, and React will handle the process of updating the real DOM when needed.
+What Do You Pass Inside createRoot()?
+You pass a DOM element into createRoot(). This DOM element is where React will mount your app. Typically, this is an element like <div id="root"></div> in your HTML file.
+
+Example:
+
+jsx
+Copy code
+const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement); // root container for React app
+In this case, React creates a "React root" inside the DOM element with the ID root.
+
+What Happens After createRoot()?
+Once you have created the root container, you call the .render() method to render the app's components inside it. This is where you pass your root React component (e.g., <App />).
+
+Example:
+
+jsx
+Copy code
+root.render(<App />);
+Here’s the flow:
+
+createRoot(): Sets up a root container for React in the real DOM.
+render(): Takes your React component tree and starts rendering it inside the root container.
+Virtual DOM: React will internally create a virtual DOM (an in-memory representation of the UI), and then it will efficiently update the real DOM based on the virtual DOM's state.
+Why Use createRoot()?
+It prepares the container for concurrent features in React (such as concurrent rendering and automatic batching).
+It provides a clean way to handle the React lifecycle and state updates.
+So, in simple terms: createRoot() creates a container where React can work with the virtual DOM and efficiently update the actual DOM. The render() method that follows tells React what to render inside that container.
+
+
+react 
+
+history of react 
+
+declarative
+
+create simple page using react
+
+//transcompiler
+
+In summary, JSX focuses on expressions because they return values to render, and statements like for and if are meant for logic control rather than value-returning expressions.
+
+
+revision 
+ 
+ statement 
+ expressions 
+ jsx 
+ how t 
+
+Component
+1+2+4 + function() + array.map()
+
+var a = 10;
+
+statement v/s expressions
+
+if(a == true){
+    console.log('a');
+}
+
+var a = 1+2;
+[]=array.map(() =>{
+
+})
+for(let i = 0 ;i<10;i++){
+    return 2;
+}
+ 1+2 + 3
+ var a = 10;+10
+
+ var a = 10;
+
+ a + 20 + 30
+
+
+ for(let i = 0;i<10;i++){
+    arr[i] = 10;
+ }
+ arr[]
+ [].indexOf();
+
+ var a = true;
+ if(a){
+    return 5;
+ }else{
+    return 6;
+ }
+
+ a ? 5:6;
+
+ // how to loop in jsx 
+ // how to do conditional rendering 
+
+
+  var c = a && b;
+
+
+  1 && 2 
+
+  if(Login){
+    show welcome;
+  }else{
+    please login;
+  }
+
+  login?'show welcome':please login 
+var user 
+if(user != null){
+     user present
+}
+
+user && 'user present'; --> null 
+
+{undefined}-> ""
+
+and condition 
+user = null , false ,'',
+{!user && 'user not present' }
+{user  || 'user not present'}
